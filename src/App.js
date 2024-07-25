@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header/Header";
+import { Quote } from "./components/Quote/Quote";
+import "./App.css";
 
-function App() {
+import React from "react";
+
+export default function App() {
+  const userName = "Dang Minh Nguyen";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div>
+        <h1>{userName}</h1>
+      </div>
+      <Quote />
+    </>
   );
 }
-
-export default App;
