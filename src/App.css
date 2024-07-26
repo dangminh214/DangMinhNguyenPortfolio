@@ -3,3 +3,8 @@
   margin: 0px; 
   padding: 5px;
 }
+
+button:hover {
+    color: white;
+    background-color: var(--theme-button);
+}
