@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Overview } from "../Overview/Overview";
+import { WorkingExperiences } from "../WorkingExperiences/WorkingExperiences";
+import { MyProjects } from "../MyProjects/MyProjects";
+import { MyCertificates } from "../MyCertificates/MyCertificates";
 import "./Quote.css";
+import { MySkills } from "../MySkills/MySkills";
 
 export const Quote = () => {
   const defaultTitle = "Welcome to my portfolio";
@@ -33,6 +37,10 @@ export const Quote = () => {
     <div className="content">
       <h2 style={styles}>{sectionName}</h2>
       {sectionName === "Overview" && <Overview />}
+      {sectionName === "Working Experiences" && <WorkingExperiences />}
+      {sectionName === "My Projects" && <MyProjects />}
+      {sectionName === "My Skills" && <MySkills />}
+      {sectionName === "My Certificates" && <MyCertificates />}
       {activated ? (
         <button onClick={handleBackButton}>Back</button>
       ) : (
