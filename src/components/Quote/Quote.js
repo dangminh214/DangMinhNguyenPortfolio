@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Overview } from "../Overview/Overview";
+import "./Quote.css";
 
 export const Quote = () => {
   const defaultTitle = "Welcome to my portfolio";
@@ -43,10 +44,8 @@ export const Quote = () => {
     setChangedSection(false);
   };
 
-  let styles = { color: "#1c1c84" };
-  if (!changedSection) {
-    styles = { color: "black" };
-  }
+  let styles = { color: changedSection ? "#1c1c84" : "black" };
+
   return (
     <div>
       <h2 style={styles}>{sectionName}</h2>
@@ -58,7 +57,7 @@ export const Quote = () => {
           <p>
             {" "}
             <button className="section-button" onClick={handleOverview}>
-              Overview about me
+              Overview
             </button>
           </p>
           <p>
