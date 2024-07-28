@@ -8,3 +8,38 @@ button:hover {
     color: white;
     background-color: var(--theme-button);
 }
+
+/* Ensure the main content takes full height of the viewport */
+.main-content {
+    display: flex;
+    height: calc(100vh - 50px); /* Adjust height to account for Header if needed */
+  }
+  
+  /* Style for the SidePhoto component */
+  .main-content > * {
+    flex: 1; /* Each child takes up equal width */
+  }
+  
+  .main-content > *:first-child {
+    flex: 0.5; /* First child (SidePhoto) takes up half the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Image inside SidePhoto */
+  .main-content img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for the Quote component */
+  .main-content > *:last-child {
+    flex: 0.5; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
