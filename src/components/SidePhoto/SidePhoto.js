@@ -11,7 +11,7 @@ export const SidePhoto = ({ selectedSection }) => {
 
   switch (selectedSection) {
     case "Overview":
-      images = [avatar, hda];
+      images = [defaultImage, avatar, hda];
       break;
     case "Working Experiences":
       images = [WorkingExperiencesImage, JavascriptLogo];
@@ -34,9 +34,6 @@ export const SidePhoto = ({ selectedSection }) => {
         "https://images.pexels.com/photos/351265/pexels-photo-351265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       ];
-      break;
-    case "Homepage":
-      images = [defaultImage];
       break;
     default:
       images = [defaultImage];
