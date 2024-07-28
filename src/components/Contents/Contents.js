@@ -47,7 +47,9 @@ export const Contents = ({ onSectionChange }) => {
       {sectionName === "My Skills" && <MySkills />}
       {sectionName === "My Certificates" && <MyCertificates />}
       {activated ? (
-        <button onClick={handleBackButton}>Back</button>
+        <button className="section-button" onClick={handleBackButton}>
+          Back
+        </button>
       ) : (
         sections.map((section, index) => (
           <p key={index}>

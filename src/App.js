@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Contents } from "./components/Contents/Contents";
 import { SidePhoto } from "./components/SidePhoto/SidePhoto";
+import { Header } from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {
@@ -11,9 +12,12 @@ export default function App() {
   };
 
   return (
-    <div className="main-content">
-      <SidePhoto selectedSection={selectedSection} />
-      <Contents onSectionChange={handleSectionChange} />
-    </div>
+    <>
+      <Header />
+      <div className="main-content">
+        <SidePhoto selectedSection={selectedSection} />
+        <Contents onSectionChange={handleSectionChange} />
+      </div>
+    </>
   );
 }
