@@ -35,7 +35,7 @@ export const Contents = ({ onSectionChange }) => {
   };
 
   let styles = {
-    color: changedSection || hoveredSection ? "#1c1c84" : "black",
+    color: changedSection || hoveredSection ? "#809fff" : "black",
   };
 
   return (
