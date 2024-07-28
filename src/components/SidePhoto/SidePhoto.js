@@ -1,5 +1,5 @@
 import React from "react";
-import imageSource from "../../assets/logo.webp";
+import defaultImage from "../../assets/logo.webp";
 import WorkingExperiencesImage from "../../assets/htv_logo.png";
 import JavascriptLogo from "../../assets/JavaScript-logo.png";
 import avatar from "../../assets/avatar.png";
@@ -35,8 +35,11 @@ export const SidePhoto = ({ selectedSection }) => {
         "https://images.pexels.com/photos/924675/pexels-photo-924675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       ];
       break;
+    case "Homepage":
+      images = [defaultImage];
+      break;
     default:
-      images = [imageSource]; // Default single image in an array
+      images = [defaultImage];
   }
 
   return <Viewpager images={images} />;

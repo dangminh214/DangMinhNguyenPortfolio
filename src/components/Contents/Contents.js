@@ -13,6 +13,7 @@ export const Contents = ({ onSectionChange }) => {
   const [changedSection, setChangedSection] = useState(false);
   const [activated, setActivated] = useState(false);
   const [sections] = useState([
+    "Homepage",
     "Overview",
     "Working Experiences",
     "My Projects",
