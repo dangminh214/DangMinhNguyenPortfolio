@@ -3,7 +3,7 @@ import { Overview } from "../Overview/Overview";
 import { WorkingExperiences } from "../WorkingExperiences/WorkingExperiences";
 import { MyProjects } from "../MyProjects/MyProjects";
 import { MyCertificates } from "../MyCertificates/MyCertificates";
-import "./Quote.css";
+import "./Contents.css";
 import { MySkills } from "../MySkills/MySkills";
 
 export const Quote = () => {

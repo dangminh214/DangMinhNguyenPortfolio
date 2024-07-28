@@ -1,4 +1,4 @@
-import { Quote } from "./components/Quote/Quote";
+import { Quote } from "./components/Contents/Contents";
 import { SidePhoto } from "./components/SidePhoto/SidePhoto";
 import "./App.css";
 
