@@ -1,10 +1,10 @@
 import React from "react";
 
 export const Overview = () => {
+  const userName = "Dang Minh Nguyen";
   return (
     <>
-      {" "}
-      <div>this is content of overview section</div>
+      <div>I am {userName}</div>
     </>
   );
 };
