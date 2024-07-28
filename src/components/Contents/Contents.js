@@ -12,6 +12,7 @@ export const Contents = ({ onSectionChange }) => {
   const [hoveredSection, setHoveredSection] = useState(null);
   const [changedSection, setChangedSection] = useState(false);
   const [activated, setActivated] = useState(false);
+
   const [sections] = useState([
     "Overview",
     "Working Experiences",
