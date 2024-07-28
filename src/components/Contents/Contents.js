@@ -6,7 +6,7 @@ import { MyCertificates } from "../MyCertificates/MyCertificates";
 import { MySkills } from "../MySkills/MySkills";
 import "./Contents.css";
 
-export const Quote = () => {
+export const Contents = ({ onSectionChange }) => {
   const defaultTitle = "Welcome to my portfolio";
   const [sectionName, setSectionName] = useState(defaultTitle);
   const [hoveredSection, setHoveredSection] = useState(null);
@@ -24,12 +24,14 @@ export const Quote = () => {
     setActivated(true);
     setSectionName(section);
     setChangedSection(true);
+    onSectionChange(section);
   };
 
   const handleBackButton = () => {
     setActivated(false);
     setSectionName(defaultTitle);
     setChangedSection(false);
+    onSectionChange(defaultTitle);
   };
 
   let styles = {
