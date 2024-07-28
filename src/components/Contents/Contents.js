@@ -3,12 +3,13 @@ import { Overview } from "../Overview/Overview";
 import { WorkingExperiences } from "../WorkingExperiences/WorkingExperiences";
 import { MyProjects } from "../MyProjects/MyProjects";
 import { MyCertificates } from "../MyCertificates/MyCertificates";
-import "./Contents.css";
 import { MySkills } from "../MySkills/MySkills";
+import "./Contents.css";
 
 export const Quote = () => {
   const defaultTitle = "Welcome to my portfolio";
   const [sectionName, setSectionName] = useState(defaultTitle);
+  const [hoveredSection, setHoveredSection] = useState(null);
   const [changedSection, setChangedSection] = useState(false);
   const [activated, setActivated] = useState(false);
   const [sections] = useState([
@@ -31,11 +32,13 @@ export const Quote = () => {
     setChangedSection(false);
   };
 
-  let styles = { color: changedSection ? "#1c1c84" : "black" };
+  let styles = {
+    color: changedSection || hoveredSection ? "#1c1c84" : "black",
+  };
 
   return (
     <div className="content">
-      <h2 style={styles}>{sectionName}</h2>
+      <h2 style={styles}>{hoveredSection || sectionName}</h2>
       {sectionName === "Overview" && <Overview />}
       {sectionName === "Working Experiences" && <WorkingExperiences />}
       {sectionName === "My Projects" && <MyProjects />}
@@ -49,6 +52,8 @@ export const Quote = () => {
             <button
               className="section-button"
               onClick={() => handleSectionChange(section)}
+              onMouseEnter={() => setHoveredSection(section)}
+              onMouseLeave={() => setHoveredSection(null)}
             >
               {section}
             </button>
