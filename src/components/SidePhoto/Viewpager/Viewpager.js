@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useSprings, animated } from "@react-spring/web";
 import useMeasure from "react-use-measure";
 import { useDrag } from "react-use-gesture";
@@ -7,25 +7,25 @@ import clamp from "lodash.clamp";
 import styles from "./Viewpager.module.css";
 
 export const Viewpager = ({ images }) => {
-  const pages = images;
   const index = useRef(0);
   const [ref, { width }] = useMeasure();
   const [props, api] = useSprings(
-    pages.length,
+    images.length,
     (i) => ({
       x: i * width,
       scale: width === 0 ? 0 : 1,
       display: "block",
     }),
-    [width]
+    [width, images.length]
   );
+
   const bind = useDrag(
     ({ active, movement: [mx], direction: [xDir], distance, cancel }) => {
       if (active && distance > width / 2) {
         index.current = clamp(
           index.current + (xDir > 0 ? -1 : 1),
           0,
-          pages.length - 1
+          images.length - 1
         );
         cancel();
       }
@@ -38,6 +38,17 @@ export const Viewpager = ({ images }) => {
       });
     }
   );
+
+  // Reset index when images change
+  useEffect(() => {
+    index.current = 0;
+    api.start((i) => ({
+      x: i * width,
+      scale: width === 0 ? 0 : 1,
+      display: "block",
+    }));
+  }, [images, width, api]);
+
   return (
     <div ref={ref} className={styles.wrapper}>
       {props.map(({ x, display, scale }, i) => (
@@ -48,7 +59,7 @@ export const Viewpager = ({ images }) => {
           style={{ display, x }}
         >
           <animated.div
-            style={{ scale, backgroundImage: `url(${pages[i]})` }}
+            style={{ scale, backgroundImage: `url(${images[i]})` }}
           />
         </animated.div>
       ))}

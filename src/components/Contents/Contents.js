@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Overview } from "../Overview/Overview";
 import { WorkingExperiences } from "../WorkingExperiences/WorkingExperiences";
 import { MyProjects } from "../MyProjects/MyProjects";
@@ -12,7 +12,6 @@ export const Contents = ({ onSectionChange }) => {
   const [hoveredSection, setHoveredSection] = useState(null);
   const [changedSection, setChangedSection] = useState(false);
   const [activated, setActivated] = useState(false);
-
   const [sections] = useState([
     "Overview",
     "Working Experiences",
@@ -25,14 +24,14 @@ export const Contents = ({ onSectionChange }) => {
     setActivated(true);
     setSectionName(section);
     setChangedSection(true);
-    onSectionChange(section);
+    onSectionChange(section); // Notify SidePhoto of the section change
   };
 
   const handleBackButton = () => {
     setActivated(false);
     setSectionName(defaultTitle);
     setChangedSection(false);
-    onSectionChange(defaultTitle);
+    onSectionChange(defaultTitle); // Reset the Viewpager images and index
   };
 
   let styles = {
