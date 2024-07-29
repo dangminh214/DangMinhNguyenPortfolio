@@ -5,15 +5,15 @@
     margin: 10px;
     padding: 10px;
     border-radius: 15px; /* Added for rounder corners */
-    background-color: #f0f0f0; /* Adding a background color for better visibility */
+    background-color: var(--theme-button); /* Adding a background color for better visibility */
     border: none; /* Remove default border */
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    color: black
+    color: var(--theme-black)
 }
 
 .section-button:hover {
-    background-color: #e0e0e0; 
+    background-color: var(--theme-button-hover); 
 }
 
 .content {

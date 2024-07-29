@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 5px; /* Reduced gap */
     padding: 10px; /* Reduced padding */
-    background-color: #060606;
+    background-color: var(--theme-black);
     margin: 0;
 }
 
@@ -16,7 +16,7 @@
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    color: #333;
+    color: #0e0e0e;
     display: flex;
     align-items: center;
     justify-content: center; /* Removed comma */
@@ -25,7 +25,7 @@
 
 .header-container a:hover {
     background-color: #e0e0e0;
-    color: #000;
+    color: var(--theme-black);
 }
 
 .logo {

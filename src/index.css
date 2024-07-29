@@ -3,7 +3,9 @@
 
 :root {
     --theme-border: #d7d7d7;
-    --theme-button: #0f3460;
+    --theme-button: #f0f0f0;
+    --theme-button-hover:#e0e0e0;
+    --theme-black: #000;
 }
 
 * {
