@@ -5,8 +5,10 @@
     padding: 10px; /* Reduced padding */
     background-color: var(--theme-black);
     margin: 0;
+    overflow: hidden; /* Ensure content stays within the container */
 }
 
+/* Style for each header item */
 .header-container div,
 .header-container a {
     background-color: #f0f0f0;
@@ -14,21 +16,53 @@
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    color: var( --theme-div-hover);
+    color: var(--theme-div-hover);
     display: flex;
     align-items: center;
-    justify-content: center; /* Removed comma */
-    font-size: 0.8em; /* Further reduced font size */
+    justify-content: center;
+    font-size: 0.8em; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
+/* Hover effect for links */
 .header-container a:hover {
     background-color: var(--theme-header-hover);
     color: var(--theme-black);
 }
 
+/* Style for logos */
 .logo {
     width: 20px; /* Further reduced width */
     height: 20px; /* Further reduced height */
     border-radius: 50%;
     margin-right: 4px; /* Further reduced margin */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .header-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        gap: 5px; /* Adjust gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        gap: 2px; /* Further adjust gap */
+    }
+    
+    .header-container div,
+    .header-container a {
+        font-size: 0.7em; /* Further reduce font size */
+        padding: 2px; /* Further reduce padding */
+    }
+
+    .logo {
+        width: 16px; /* Further reduce logo size */
+        height: 16px; /* Further reduce logo size */
+        margin-right: 2px; /* Further reduce margin */
+    }
 }
