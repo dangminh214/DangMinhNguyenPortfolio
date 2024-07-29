@@ -13,6 +13,7 @@ export const Contents = ({ onSectionChange }) => {
   const [changedSection, setChangedSection] = useState(false);
   const [activated, setActivated] = useState(false);
   const [sections] = useState([
+    "Homepage",
     "Overview",
     "Working Experiences",
     "My Projects",
@@ -38,6 +39,8 @@ export const Contents = ({ onSectionChange }) => {
     color: changedSection || hoveredSection ? "#809fff" : "black",
   };
 
+  const filteredSections = sections.filter((section) => section !== "Homepage");
+
   return (
     <div className="content">
       <h2 style={styles}>{hoveredSection || sectionName}</h2>
@@ -51,7 +54,7 @@ export const Contents = ({ onSectionChange }) => {
           Back
         </button>
       ) : (
-        sections.map((section, index) => (
+        filteredSections.map((section, index) => (
           <p key={index}>
             <button
               className="section-button"

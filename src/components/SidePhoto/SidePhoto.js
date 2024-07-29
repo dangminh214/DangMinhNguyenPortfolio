@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import defaultImage from "../../assets/logo.webp";
 import WorkingExperiencesImage from "../../assets/htv_logo.png";
 import JavascriptLogo from "../../assets/JavaScript-logo.png";
-import avatar from "../../assets/avatar.png";
+import avatar from "../../assets/avatar.jpg";
 import hda from "../../assets/hda.png";
 import steamFlipCalcImg from "../../assets/steamflipcal.png";
 import steamFlipCalcImg2 from "../../assets/steamflipcalc2.png";
@@ -12,9 +12,15 @@ export const SidePhoto = ({ selectedSection }) => {
   const [images, setImages] = useState([defaultImage]);
 
   useEffect(() => {
-    switch (selectedSection) {
+    // Default to Homepage if selectedSection is not set
+    const section = selectedSection || "Homepage";
+
+    switch (section) {
+      case "Homepage":
+        setImages([defaultImage]);
+        break;
       case "Overview":
-        setImages([defaultImage, avatar, hda]);
+        setImages([avatar, hda]);
         break;
       case "Working Experiences":
         setImages([

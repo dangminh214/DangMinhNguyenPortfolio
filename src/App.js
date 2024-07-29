@@ -5,7 +5,7 @@ import { Header } from "./components/Header/Header";
 import "./App.css";
 
 export default function App() {
-  const [selectedSection, setSelectedSection] = useState("Overview");
+  const [selectedSection, setSelectedSection] = useState("Homepage");
 
   const handleSectionChange = (section) => {
     setSelectedSection(section);
