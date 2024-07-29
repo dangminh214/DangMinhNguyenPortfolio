@@ -3,6 +3,8 @@ import defaultImage from "../../assets/logo.webp";
 import WorkingExperiencesImage from "../../assets/htv_logo.png";
 import JavascriptLogo from "../../assets/JavaScript-logo.png";
 import avatar from "../../assets/avatar.jpg";
+import minh_htv from "../../assets/minh_htv.jpg";
+import minh_htv2 from "../../assets/minh_htv2.jpg";
 import hda from "../../assets/hda.png";
 import steamFlipCalcImg from "../../assets/steamflipcal.png";
 import steamFlipCalcImg2 from "../../assets/steamflipcalc2.png";
@@ -23,11 +25,7 @@ export const SidePhoto = ({ selectedSection }) => {
         setImages([avatar, hda]);
         break;
       case "Working Experiences":
-        setImages([
-          WorkingExperiencesImage,
-          JavascriptLogo,
-          "https://images.pexels.com/photos/24446093/pexels-photo-24446093/free-photo-of-ly-c-c-chen-kinh.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        ]);
+        setImages([WorkingExperiencesImage, minh_htv2, minh_htv]);
         break;
       case "My Projects":
         setImages([
@@ -38,6 +36,7 @@ export const SidePhoto = ({ selectedSection }) => {
         break;
       case "My Skills":
         setImages([
+          JavascriptLogo,
           "https://media.licdn.com/dms/image/D4E12AQGmeG3bDuWOgA/article-cover_image-shrink_720_1280/0/1688282331421?e=2147483647&v=beta&t=5DAKzEUi8dK_d1ONVDqgUYnTRQmighfwqBiO2Pt0I7w",
           "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",

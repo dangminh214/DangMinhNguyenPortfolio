@@ -39,7 +39,7 @@ export const Contents = ({ onSectionChange }) => {
     color: changedSection || hoveredSection ? "#809fff" : "black",
   };
 
-  const filteredSections = sections.filter((section) => section !== "Homepage");
+  const renderedSections = sections.filter((section) => section !== "Homepage");
 
   return (
     <div className="content">
@@ -54,7 +54,7 @@ export const Contents = ({ onSectionChange }) => {
           Back
         </button>
       ) : (
-        filteredSections.map((section, index) => (
+        renderedSections.map((section, index) => (
           <p key={index}>
             <button
               className="section-button"
