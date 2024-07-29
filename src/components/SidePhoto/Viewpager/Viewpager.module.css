@@ -17,7 +17,7 @@
 
 .page > div {
     touch-action: none;
-    background-size: cover; /* Cover the container while maintaining aspect ratio */
+    background-size: contain; /* Scale down to fit inside the container */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-position: center center; /* Center the image */
     width: 100%; /* Ensure it covers the width of .page */
