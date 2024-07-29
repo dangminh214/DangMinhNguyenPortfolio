@@ -15,7 +15,7 @@ export default function App() {
     <>
       <Header />
       <div className="main-content">
-        <SidePhoto selectedSection={selectedSection} />
+        {/* <SidePhoto selectedSection={selectedSection} /> */}
         <Contents onSectionChange={handleSectionChange} />
       </div>
     </>

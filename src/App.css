@@ -1,33 +1,3 @@
-.main-content {
-    display: flex;
-    height: calc(100vh - 50px); /* Adjust height to account for header if needed */
-}
-
-.main-content > * {
-    flex: 1; /* Each child takes up equal width */
-}
-
-.main-content > *:first-child {
-    flex: 0.5; /* First child (SidePhoto) takes up half the width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-content > *:last-child {
-    flex: 0.5; /* Second child (Contents) takes up half the width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-content img {
-    max-width: 50%;
-    height: auto;
-}
-
 .personal-data {
     margin: 8px;
 }
