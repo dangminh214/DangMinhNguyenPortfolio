@@ -4,7 +4,7 @@
 :root {
     --theme-border: #d7d7d7;
     --theme-button: #f0f0f0;
-    --theme-button-hover:#e0e0e0;
+    --theme-button-hover:#303030;
     --theme-black: #000;
 }
 
@@ -16,4 +16,17 @@
 
 button {
     cursor: pointer;
+    color: var(--theme-black);
+    background-color: var(--theme-button);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px; /* Added for rounder corners */
+    border: none; 
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    color: white;
+    background-color: var(--theme-button-hover); 
 }
