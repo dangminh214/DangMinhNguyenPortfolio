@@ -11,7 +11,7 @@
 /* Style for each header item */
 .header-container div,
 .header-container a {
-    background-color: #f0f0f0;
+    background-color: var(--theme-button);
     padding: 3px; /* Further reduced padding */
     border-radius: 5px;
     text-align: center;
