@@ -14,7 +14,7 @@
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    color: #0e0e0e;
+    color: var( --theme-div-hover);
     display: flex;
     align-items: center;
     justify-content: center; /* Removed comma */
@@ -22,7 +22,7 @@
 }
 
 .header-container a:hover {
-    background-color: #e0e0e0;
+    background-color: var(--theme-header-hover);
     color: var(--theme-black);
 }
 

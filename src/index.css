@@ -6,6 +6,7 @@
     --theme-button: #f0f0f0;
     --theme-button-hover:#303030;
     --theme-black: #000;
+    --theme-header-hover: #888888;
 }
 
 * {
