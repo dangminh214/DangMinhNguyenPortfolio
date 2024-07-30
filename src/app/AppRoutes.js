@@ -1,12 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Header } from "../components/Header/Header";
+
 import { Home } from "../pages/Home";
 import { MyProjects } from "../pages/MyProjects";
 import { MySkills } from "../pages/MySkills";
 import { Overview } from "../pages/Overview";
 import { WorkingExperiences } from "../pages/WorkingExperiences";
-import { BackButton } from "../components/BackButton";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
@@ -36,9 +35,7 @@ const AnimatedRoutes = ({ location }) => (
 function AppRoutes() {
   return (
     <div className="s_c">
-      <Header />
       <AnimatedRoutes />
-      <BackButton />
     </div>
   );
 }
