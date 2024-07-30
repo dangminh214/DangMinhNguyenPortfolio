@@ -1,0 +1,35 @@
+.large-input {
+    width: 300px; 
+    height: 40px; 
+    font-size: 18px; 
+    padding: 10px; 
+}
+
+.addtask form {
+    align-items: center;
+    gap: 10px;
+}
+
+form {
+    align-items: center;
+}
+
+.reset {
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transitions */
+  }
+  
+  .reset:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  .reset:active {
+    transform: scale(0.98); /* Slightly scale down on click */
+  }
+  
