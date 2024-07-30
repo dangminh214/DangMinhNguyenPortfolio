@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
+import { Header } from "../components/Header/Header";
 import { Home } from "../pages/Home";
 import { MyProjects } from "../pages/MyProjects";
 import { MySkills } from "../pages/MySkills";
@@ -36,8 +36,9 @@ const AnimatedRoutes = ({ location }) => (
 function AppRoutes() {
   return (
     <div className="s_c">
-      <BackButton />
+      <Header />
       <AnimatedRoutes />
+      <BackButton />
     </div>
   );
 }
