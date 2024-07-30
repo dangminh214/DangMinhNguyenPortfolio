@@ -1,8 +1,0 @@
-.section-picture {
-    width: 100px; /* Fixed width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 200px; /* Maximum width */
-    max-height: 200px; /* Maximum height */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
-  }
-  

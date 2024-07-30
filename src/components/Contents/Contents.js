@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Overview } from "../Overview/Overview";
-import { WorkingExperiences } from "../WorkingExperiences/WorkingExperiences";
-import { MyProjects } from "../MyProjects/MyProjects";
-import { MyCertificates } from "../MyCertificates/MyCertificates";
-import { MySkills } from "../MySkills/MySkills";
+import { Overview } from "../../pages/Overview/Overview";
+import { WorkingExperiences } from "../../pages/WorkingExperiences/WorkingExperiences";
+import { MyProjects } from "../../pages/MyProjects/MyProjects";
+import { MyCertificates } from "../../pages/MyCertificates/MyCertificates";
+import { MySkills } from "../../pages/MySkills/MySkills";
 import "./Contents.css";
 
 export const Contents = ({ onSectionChange }) => {

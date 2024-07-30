@@ -1,5 +1,5 @@
 import React from "react";
-import "./MyCertificates";
+import ".";
 
 export const MyCertificates = () => {
   return (
